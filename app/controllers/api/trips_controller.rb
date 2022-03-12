@@ -12,7 +12,6 @@ class Api::TripsController < ApplicationController
   end
 
   def create
-  
     @trip = @user.trips.new(trip_params)
     if @trip.save
       render json: @trip
@@ -44,7 +43,7 @@ class Api::TripsController < ApplicationController
       @trip = user.trips.find(params[:id])
     end
 
-    def trips_params
+    def trip_params
       params.require(:trip).permit(:name, :duration)
     end
 
