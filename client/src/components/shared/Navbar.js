@@ -6,8 +6,8 @@ const Navbar = () => (
       <Link to='/'>
         <li>Home</li>
       </Link>
-      <Link to='/Billboards'>
-        <li>Billboards</li>
+      <Link to='/Users'>
+        <li>Users</li>
       </Link>
     </ul>
   </>
