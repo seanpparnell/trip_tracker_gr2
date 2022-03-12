@@ -13,6 +13,7 @@ const User = ({ id, email, password, updateUser, deleteUser }) => {
           <UserForm 
             id={id}
             email={email}
+            password={password}
             updateUser={updateUser}
             setEdit={setEdit}
           />
