@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const UserForm = ({addUser, id, email, password, updateUser, deleteUser}) => {
+const UserForm = ({addUser, id, email, password, updateUser, setEdit}) => {
   const [user, setUser] = useState({ email: '', password: ''})
 
   useEffect( () => {
@@ -13,7 +13,7 @@ const UserForm = ({addUser, id, email, password, updateUser, deleteUser}) => {
     e.preventDefault()
       if (id) {
         updateUser(id, user)
-        // setEdit(false)
+        setEdit(false)
       } else {
         addUser(user)
       }
