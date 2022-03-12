@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from "axios";
+import UserForm from './components/users/UserForm';
 
 const App = () => {
   const [users, setUsers] = useState([])
@@ -45,7 +46,7 @@ const App = () => {
   return(
     <>
       <h1>Users</h1>
-        
+        <UserForm />
   
     </>
   )

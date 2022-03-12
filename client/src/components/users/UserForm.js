@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const UserForm = ({addUser}) => {
+const UserForm = ({addUser, id, email, password, updateUser, deleteUser}) => {
   const [user, setUser] = useState({ email: '', password: ''})
 
   useEffect( () => {
@@ -26,7 +26,7 @@ const UserForm = ({addUser}) => {
         <input
           name="email"
           value={user.email}
-          onChange={ (e) => setBillboard({ ...user, email: e.target.value })}
+          onChange={ (e) => setUser({ ...user, email: e.target.value })}
           placeholder="email"
           required
         />
