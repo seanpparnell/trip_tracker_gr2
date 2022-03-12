@@ -21,7 +21,7 @@ const Trips = ({}) => {
 
   
   const addTrip = (trip) => {
-    axios.post(`/api/users/${userId}/trip`, { trip })
+    axios.post(`/api/users/${userId}/trips`, { trip })
     .then( res => setTrips([...trips, res.data]) )
     .catch( err => console.log(err))
   }

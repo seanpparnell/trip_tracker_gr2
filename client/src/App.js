@@ -13,7 +13,11 @@ const App = () => (
   <Routes>
       <Route path="/" element={ <Home /> } />
       <Route path="/about" element={ <About /> } />
+<<<<<<< HEAD
       <Route path="/users" element={<Users />} />
+=======
+      <Route path="/users" element={ <Users />} />
+>>>>>>> e81f9ae5 (navbar update)
       <Route path="/users/:userId/trips" element={ <Trips />} />
       {/* <Route path="/trips/:tripId/locations" element={ <Locations /> } /> */}
       <Route path="*" element={ <Nomatch />} />  
