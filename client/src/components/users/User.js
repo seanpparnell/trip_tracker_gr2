@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import UserForm from './UserForm';
-<<<<<<< HEAD
 import Trips from '../trips/Trips';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> e81f9ae5 (navbar update)
+
 
 const User = ({ id, email, password, updateUser, deleteUser }) => {
   const [editing, setEdit] = useState(false)
@@ -37,14 +34,10 @@ const User = ({ id, email, password, updateUser, deleteUser }) => {
           >
             Delete
           </button>
-<<<<<<< HEAD
           <Link
             to={`/users/${id}/trips`}
             state={{ userId: id, userEmail: email }}
           >
-=======
-          <Link to={`/users/${id}/trips`}>
->>>>>>> e81f9ae5 (navbar update)
             Trips
           </Link>
         </>
