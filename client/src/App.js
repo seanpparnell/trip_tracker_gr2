@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const [users, setUsers] = useState[]
+
+  useEffect( () => {
+    axios.get('api/users')
+      .then( res => {
+        setUsers(res.data)
+      })
+      .catch( err => console.log(err) )
+    }, [])
+
+    const addUser = (user) => {
+      axios.post('/api/users', { user })
+      .then( res => {
+        setUsers([...users, res.data ])
+      })
+      .catch( err => console.log(err) )
+    }
+    const updateUser = (id, user) => {
+      axios.put(`/api/users/${id}`, { user })
+      .then( res => {
+        const newUpdatedUsers = users.map( u => {
+          if (u.id === id) {
+            return res.data
+          }
+          return u
+        })
+        setUsers(newUpdatedUsers)
+      })
+      .catch( err => console.log(err) )
+    }
+
+    const deleteUser = (id) => {
+      axios.delete(`/api/users/${id}`)
+      .then( res => {
+        setUsers(users.filter( u => u.id !== id ))
+        alert(res.data.message)
+      })
+      .catch( err =>console.log(err) )
+    }
+
+  return(
+    <>
+      <h1>Users</h1>
+        
+  
+    </>
+  )
 }
-
 export default App;
