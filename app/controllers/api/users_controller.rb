@@ -28,7 +28,7 @@ class Api::UsersController < ApplicationController
   end
 
   def destroy
-    @billboard.destroy
+    @user.destroy
     render json: { message: 'User deleted'}
   end
 
