@@ -37,7 +37,7 @@ const UserForm = ({addUser, id, email, password, updateUser, setEdit}) => {
           placeholder="password"
           required
         />
-        <button type="submit">Submit</button>
+        <button type="submit">Register</button>
 
       </form>
     </>
