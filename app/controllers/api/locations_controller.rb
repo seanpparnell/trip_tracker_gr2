@@ -41,7 +41,7 @@ class Api::LocationsController < ApplicationController
       @location = @trip.locations.find(params[:id])
     end
 
-    def locations_params
+    def location_params
       params.require(:location).permit(:name, :where)
     end
   end
