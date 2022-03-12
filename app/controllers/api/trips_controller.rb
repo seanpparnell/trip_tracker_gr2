@@ -44,7 +44,7 @@ class Api::TripsController < ApplicationController
       @trip = user.trips.find(params[:id])
     end
 
-    def trips_params
+    def trip_params
       params.require(:trip).permit(:name, :duration)
     end
 
