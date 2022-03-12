@@ -8,4 +8,4 @@ const Nomatch = () => (
   </>
 )
 
-export default Nomatch
+export default Nomatch;
