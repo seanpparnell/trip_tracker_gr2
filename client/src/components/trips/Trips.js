@@ -45,7 +45,7 @@ const Trips = ({}) => {
   const deleteTrip = (id) => {
     axios.delete(`/api/users/${userId}/trips/${id}`)
       .then( res => {
-        setTrip( trips.filter( t => t.id !== id ))
+        setTrips( trips.filter( t => t.id !== id ))
         alert(res.data.message)
       })
       .catch( err => console.log(err))
