@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from "axios";
 
 const App = () => {
-  const [users, setUsers] = useState[]
+  const [users, setUsers] = useState([])
 
   useEffect( () => {
     axios.get('api/users')

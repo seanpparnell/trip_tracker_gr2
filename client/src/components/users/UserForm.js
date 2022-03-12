@@ -26,7 +26,7 @@ const UserForm = ({addUser}) => {
         <input
           name="email"
           value={user.email}
-          onChange={ (e) => setBillboard({ ..., email: e.target.value })}
+          onChange={ (e) => setBillboard({ ...user, email: e.target.value })}
           placeholder="email"
           required
         />
@@ -44,4 +44,4 @@ const UserForm = ({addUser}) => {
   )
 }
 
-export default BillboardForm;
+export default UserForm;
