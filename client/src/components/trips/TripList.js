@@ -8,8 +8,8 @@ const TripList = ({ trips, updateTrip, deleteTrip }) => (
       
         {...t}
         fav={false}
-        updateTopic={updateTrip}
-        deleteTopic={deleteTrip}
+        updateTrip={updateTrip}
+        deleteTrip={deleteTrip}
       />
     )}
   </>

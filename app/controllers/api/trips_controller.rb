@@ -3,7 +3,6 @@ class Api::TripsController < ApplicationController
   before_action :set_trip, only: [:show, :update, :destroy]
 
   def index
-    
     render json: @user.trips
   end
 
@@ -39,8 +38,7 @@ class Api::TripsController < ApplicationController
     end
 
     def set_trip
-      
-      @trip = user.trips.find(params[:id])
+      @trip = @user.trips.find(params[:id])
     end
 
     def trip_params

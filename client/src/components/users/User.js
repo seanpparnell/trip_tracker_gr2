@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import UserForm from './UserForm';
+import Trips from '../trips/Trips';
 
 const User = ({ id, email, password, updateUser, deleteUser }) => {
   const [editing, setEdit] = useState(false)
@@ -33,7 +34,9 @@ const User = ({ id, email, password, updateUser, deleteUser }) => {
             Delete
           </button>
           <Link 
-            to={`/users/${id}/trips`}>
+            to={`/users/${id}/trips`}
+              state={{ userId: id, userEmail: email, userPassword: password}}
+            >
             Trips
           </Link>
         </>
